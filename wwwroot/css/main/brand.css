@@ -1,0 +1,42 @@
+#brand1,#brand2{
+    background-color: #f4f0ea;
+    padding-top: 15px
+}
+#title{
+    margin:17px -15px 17px;
+}
+h2{
+    display:inline;
+    color:#333;
+    font-weight:bold;
+    font-size: 28px;
+}
+#small{
+    margin-top: 10px;
+}
+#small1,#small2{
+    font-size: 16px;
+    letter-spacing:2px;
+}
+a{
+    color: #404d5b;
+}
+a:hover,a:focus{
+    color: #b4a078;
+    text-decoration: none;
+}
+@media screen and (max-width: 767px){
+    #brand2{
+        padding-top: 0px;
+    }
+   h2{
+      font-size: 20px;
+   }
+   #small2{
+      margin-top: -30px;
+   }
+   #small1{
+       display: none;
+   }
+   
+}

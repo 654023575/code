@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="css/main/types.css">
+<link rel="stylesheet" href="css/home/home.css">
+<div ng-controller="interestCtrl">
+    <!--<span>{{value}}</span>-->
+    <div class="container-fluid" style="background-color:#f5f5f5">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#/main">首页</a></li>
+                    <li class="active">志趣</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div id="banners" class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <a href="#">
+                    <img src="images/home/home-banner.jpg" alt="homebanner" class="img-responsive">
+                </a>
+            </div>
+        </div>
+
+        <div class="row" id="wow">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/WOW/WOW.png" alt="logo">
+                <span class="hqtitle">魔兽世界</span>
+                <span>艾泽拉斯的冒险，才刚刚开始</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="w in wow">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{w.href}}">
+                                    <img src="{{w.src}}" alt="{{w.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{w.href}}">{{w.item}}</a></h3>
+                                    <p>{{w.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="hs">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/HS/HS.png" alt="logo">
+                <span class="hqtitle">炉石传说</span>
+                <span>快进来坐下吧，看看酒馆的新玩意</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="h in hs">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{h.href}}">
+                                    <img src="{{h.src}}" alt="{{h.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{h.href}}">{{h.item}}</a></h3>
+                                    <p>{{h.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="ow">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/OW/OW.png" alt="logo">
+                <span class="hqtitle">守望先锋</span>
+                <span>物美价廉的补给箱</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="o in ow">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{o.href}}">
+                                    <img src="{{o.src}}" alt="{{o.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{o.href}}">{{o.item}}</a></h3>
+                                    <p>{{o.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="diablo">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/diablo/diablo.png" alt="logo">
+                <span class="hqtitle">暗黑破坏神III</span>
+                <span>奈非天们，停下脚步整理下行囊</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="d in diablo">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{d.href}}">
+                                    <img src="{{d.src}}" alt="{{d.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{d.href}}">{{d.item}}</a></h3>
+                                    <p>{{d.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="starCarft">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/starCarft/starCarft.png" alt="logo">
+                <span class="hqtitle">星际争霸II</span>
+                <span>记录科普卢星区的战斗时光</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="s in starCarft">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{s.href}}">
+                                    <img src="{{s.src}}" alt="{{s.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{s.href}}">{{s.item}}</a></h3>
+                                    <p>{{s.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="heros">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/interest/heros/heros.png" alt="logo">
+                <span class="hqtitle">风暴英雄</span>
+                <span>时空枢纽，是个充满惊喜的地方</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="h in heros">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{h.href}}">
+                                    <img src="{{h.src}}" alt="{{h.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{h.href}}">{{h.item}}</a></h3>
+                                    <p>{{h.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>

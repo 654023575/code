@@ -1,0 +1,119 @@
+body,button, 
+input, 
+select, 
+textarea,
+h1 ,h2, h3, h4, h5, h6 
+{ font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+ /*导航栏nav*/
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-default .navbar-nav>li>a{
+  padding: 5px;
+  margin: 15px 10px;
+  color: #000;
+  font-weight: bold;
+}
+.liactive>a{
+  color: #b4a078 !important;
+  border-bottom: solid #b4a078
+}
+.navbar-default .navbar-nav>li>a:hover{
+  color: #b4a078;
+  border-bottom: solid #b4a078
+}
+.btn:focus{
+  border-color: #f8f8f8;
+}
+.navbar-toggle .icon-bar+.icon-bar{
+  margin-top: 7px;
+  font-weight: bold;
+}
+@media screen and (min-width: 767px){
+      #ui-view{
+      margin-top: 63px;
+    }
+}
+
+/*底部*/
+#bottom{
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+#promise{
+  padding-left: 0;
+  list-style: none;
+}
+#promise>li{
+  margin-top: 0.5rem;
+}
+.footer {
+   bottom: 0;
+   width: 100%;
+   height: 46px;
+   background-color: white;
+   border-top: 1px solid lightgray;
+}
+
+.footer span {
+   display: block;
+   padding: 12px 0 0 5px;
+   color: #999;
+}
+
+.footer a {
+   color: #999;
+   margin-left: 20px;
+}
+#toTop{
+  width: 50px;
+  height: 50px;
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  cursor: pointer;
+  z-index: 999999;
+  border-radius: 50px;
+}
+/*当屏幕最大为767px*/
+@media screen and (max-width: 767px){
+    #toTop{
+      width: 30px;
+      height: 30px;
+      bottom: 1rem;
+      right: 1rem;
+      position: fixed;
+      cursor: pointer;
+      z-index: 999999;
+      border-radius: 50px;
+    }
+    .offcanvas-toggle{
+      background-color: white;
+    }
+    #js-bootstrap-offcanvas{
+    width: 104px;
+    text-align: center;
+    }
+  .navbar-toggle{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .navbar-header>.navbar-brand{
+    display: none;
+  }
+  #closebtn{
+    padding: 10px;
+  }
+  #closebtn:hover,#closebtn:active,#closebtn:visited{
+    background-color: #f8f8f8;
+  }
+  .navbar-brand>img{
+    display: block;
+    margin-top: -27px;
+    margin-left: -25px;
+  }
+}
+

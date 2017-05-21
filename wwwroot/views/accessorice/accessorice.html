@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="css/main/types.css">
+<link rel="stylesheet" href="css/home/home.css">
+<div ng-controller="accessCtrl">
+    <!--<span>{{value}}</span>-->
+    <div class="container-fluid" style="background-color:#f5f5f5">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="#/main">首页</a></li>
+                    <li class="active">配件</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div id="banners" class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <a href="#">
+                    <img src="images/home/home-banner.jpg" alt="homebanner" class="img-responsive">
+                </a>
+            </div>
+        </div>
+
+        <div class="row" id="luggage">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/accessorice/luggage/luggage.png" alt="logo">
+                <span class="hqtitle">箱包</span>
+                <span>范思哲、Coach等品牌制造商出品</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="l in luggage">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{l.href}}">
+                                    <img src="{{l.src}}" alt="{{l.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{l.href}}">{{l.item}}</a></h3>
+                                    <p>{{l.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="backpack">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/accessorice/backpack/backpack.png" alt="logo">
+                <span class="hqtitle">背包</span>
+                <span>背上的时髦</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="b in backpack">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{b.href}}">
+                                    <img src="{{b.src}}" alt="{{b.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{b.href}}">{{b.item}}</a></h3>
+                                    <p>{{b.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="slipper">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/accessorice/slipper/slipper.png" alt="logo">
+                <span class="hqtitle">拖鞋</span>
+                <span>穿上拖鞋，回到自我</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="s in slipper">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{s.href}}">
+                                    <img src="{{s.src}}" alt="{{s.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{s.href}}">{{s.item}}</a></h3>
+                                    <p>{{s.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="scarf">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/accessorice/scarf/scarf.png" alt="logo">
+                <span class="hqtitle">围巾</span>
+                <span>围上它，你的造型才完整</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="s in scarf">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{s.href}}">
+                                    <img src="{{s.src}}" alt="{{s.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{s.href}}">{{s.item}}</a></h3>
+                                    <p>{{s.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="ornament">
+            <div class="col-lg-3 col-lg-offset-5 col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 col-xs-12" style="margin-top:30px;">
+                <img class="hqlogo logoimg-responsive" src="images/accessorice/ornament/ornament.png" alt="logo">
+                <span class="hqtitle">配饰</span>
+                <span>与众不同的点睛之笔</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <ul class="quilt">
+                    <li ng-repeat="o in ornament">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" style="padding-right:5px;padding-left:0;">
+                            <div class="thumbnail">
+                                <a href="{{o.href}}">
+                                    <img src="{{o.src}}" alt="{{o.alt}}" class="img-responsive">
+                                </a>
+                                <div class="caption">
+                                    <h3><a href="{{o.href}}">{{o.item}}</a></h3>
+                                    <p>{{o.price | currency:"￥"}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

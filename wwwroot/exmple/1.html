@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='../angular-1.3.9/angular.js'></script>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .listbox {
+            width: 600px;
+            height: 30px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 3px #333;
+        }
+        
+        .listbox li {
+            width: 100px;
+            float: left;
+            height: 30px;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            font-family: '微软雅黑';
+            border-radius: 15px;
+        }
+        
+        .listbox li.cour {
+            background: skyblue;
+            color: #fff;
+            text-shadow: 1px 1px 1px #333;
+        }
+    </style>
+</head>
+
+<body ng-app='App'>
+    <ul ng-controller='cont' class='listbox'>
+        <li ng-repeat=' i in list' ng-click='cour($index)' ng-class="{ true :'cour',false:''} [i.isclick]">{{i.text}}</li>
+    </ul>
+    <script>
+        var data=[{text:'Home',isclick:false},{text:'News'},{text:'Project',isclick:false},{text:'Cooperate',isclick:false},{text:'About Us',isclick:false},{text:'More',isclick:false}]; 
+        var APP=angular.module('App',[]);//定义angular模块
+        APP.controller('cont',function($scope){//angular控制器
+        $scope.list=data;//注入数据
+        $scope.list[0].isclick=true;//首个加样式
+        $scope.cour=function(index){
+        //这里用了js实现的,不用js用angular要怎么实现
+        for(var i=0;i<$scope.list.length;i++){
+        $scope.list[i].isclick=false;//点击的时候其他的都不加样式
+        }
+
+        $scope.list[index].isclick=true;//ng-click时当前的添加样式
+        }
+
+        })
+
+    </script>
+</body>
+
+</html>

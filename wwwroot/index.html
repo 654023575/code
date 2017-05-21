@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Hover Effect Ideas: Inspiration for subtle hover effects" />
+    <meta name="keywords" content="hover effect, inspiration, grid, thumbnail, transition, subtle, web design" />
+    <meta name="toTop" content="true">
+    <meta name="author" content="YangGong"/>
+    <title>严选</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" media="all">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" media="all">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.offcanvas.min.css">
+
+    <link rel="stylesheet" href="libs/angular/angular-toaster/toaster.css">
+
+    <link rel="stylesheet" href="css/default.css">
+    <!--owlCarousel-->
+    <link rel="stylesheet" href="libs/owl/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl/css/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body-offcanvas">
+    <header class="clearfix" ng-controller="indexCtrl">
+        <div class="navbar-toggle offcanvas-toggle">
+            <div class="pull-right">
+                <button class="btn" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="background-color:#f9f7f6;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="pull-left">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-offcanvas navbar-offcanvas-right navbar-offcanvas-touch navbar-offcanvas-fade"
+            role="navigation" id="js-bootstrap-offcanvas">
+            <div class="container-fluid">
+                <div style="height:60px;" class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo.png" alt="logo">
+                            </a>
+                            <button id="closebtn" class="btn navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+                            <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <ul id="nav-menu" class="nav navbar-nav" ng-repeat="i in navs">
+                                <li ng-click="liactive($index)" ng-class="{true : 'liactive',false:''}[i.isclick]">
+                                    <a href="{{i.url}}">
+                                        <span ng-bind="i.item">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul id="nav-user" class="nav navbar-nav navbar-right">
+                                <li><a href="#/login">登录</a></li>
+                                <li><a href="#/regist">注册</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="ui-view" ui-view></div>
+    <!--底部-->
+    <!--<div data-ng-include="'views/bottom.html'"></div>-->
+
+    <!--jquery-->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/toTop.js"></script>
+    <!--bootstrap-->
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.offcanvas.min.js"></script>
+    <!--wow-->
+    <script src="libs/wow/wow.min.js"></script>
+    <!--angularjs-->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular/angular-ui-router/angular-ui-router.js"></script>
+    <script src="libs/angular/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular/angular-toaster/toaster.js"></script>
+    <script src="libs/angular/oclazyload/ocLazyLoad.js"></script>
+    <!--owl-->
+    <script src="libs/owl/js/owl.carousel.min.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/route.config.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

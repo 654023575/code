@@ -1,0 +1,118 @@
+/*轮播图去黑色背景*/
+.carousel1{
+    margin-top: 22px
+}
+.carousel-control.left {
+background-image: none
+}
+.carousel-control.right {
+background-image: none
+}
+h3{
+    font-size: 18px;
+    margin-top: 0;
+    font-family: "Microsoft Yahei","微软雅黑",verdana;
+    color: #333;
+    display: inline-block;
+}
+a.item{
+    padding: 0 10px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid rgba(180,160,120,.3);
+    background-color: #f5f3ef;
+    color: #b4a078;
+    margin-left: 12px;
+}
+.desc{
+    font-size: 12px;
+    padding-bottom: 20px;
+    padding-top: 13px;
+    line-height: 18px;
+    color: #999;
+}
+.detail{
+    background-color: #f5f3ef;
+    border-top: 1px dotted #dedede;
+    border-bottom: 1px dotted #dedede;
+    padding: 0 0;
+    line-height: 29px;
+}
+.detail>div{
+    margin: 10px 0;
+}
+.rmb{
+    line-height: 30px;
+    color: #d7282d;
+    font-size: 18px;
+    padding: 0 0;
+    text-align: center;
+}
+.price{
+    font-size: 28px;
+    line-height: 29px;
+    margin-left: 2px;
+    color: #d7282d;
+    padding: 0 0;
+}
+.service{
+    padding: 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.service>li{
+    float: right;
+}
+
+.tab-con{
+    border: 1px solid #999;
+    vertical-align: middle;
+    padding: 5px;
+}
+.panel-heading{
+    font-size: 17px;
+}
+.m-attrList{
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.m-attrList>.item{
+    padding: 8px 30px;
+    float: left;
+    min-width: 50%;
+    line-height: 24px;
+    font-size: 14px;
+    border-bottom: 1px dashed #e8e8e8;
+}
+.m-attrList>.item>.name{
+        display: block;
+    width: 105px;
+}
+.m-attrList>.item>.value{
+       color: #999; 
+}
+.m-attrList .item .name, .m-attrList .item .value {
+    float: left;
+}
+p{
+    margin-bottom: 0;
+}
+img{
+    vertical-align: top;
+}
+@media screen and (max-width: 767px){
+    .name1{
+        margin-top: 15px;
+    }
+    .carousel1{
+        margin-top: 0px;
+    }
+    #ranking{
+        display: none;
+    }
+    #shopd{
+        padding-right: 0;
+    }
+}

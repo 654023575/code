@@ -1,0 +1,64 @@
+h3{
+    color: #999;
+}
+.panel-default>.panel-heading{
+    background-color: #fff;
+}
+.input-group-addon{
+    background-color: #fff;
+}
+#panel1{
+    margin-top: 3em;
+}
+.panel-body>div{
+    margin: 20px auto;
+}
+#loginbtn{
+    color: white;
+    background-color: #b4a078;
+}
+#frlogin{
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color:  #999;
+    text-decoration: none;
+}
+a:hover{
+    color: #b4a078;
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+.sigma-content{
+    color: #999;
+    text-align: center;
+    background-color: #fff;
+}
+.sigma-middle-line:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #999;/*颜色需与主题大背景色一致*/ 
+    position: relative;
+    top: 10px;/*调节线高*/
+    left: 0;
+}
+.sigma-line-text{
+    display: inline-block;
+    background: #fff;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#otherl{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between
+}

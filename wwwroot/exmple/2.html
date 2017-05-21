@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cart">
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <!--<link rel="stylesheet" href="../scripts/angular-1.4.0-rc.2/docs/components/bootstrap-3.1.1/css/bootstrap.min.css">-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="cartCtr">
+    <table class="table table-hover" ng-show="items.length">
+        <caption>AngularJS实现购物车</caption>
+        <tr>
+            <th>序号</th>
+            <th>商品信息</th>
+            <th>单价（元）</th>
+            <th>数量</th>
+            <th>金额（元）</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat=" item in items">
+            <td>{{$index + 1}}</td>
+            <td><a href="{{item.linkUrl}}" target="_blank" title="此链接将跳转到淘宝相关页面...">{{item.title}}</a></td>
+            <td class="bold">{{item.price|number:2}}</td>
+            <td>
+                <button type="button" class="btn btn-default btn-xs" ng-click="reduce(item.id)" ng-disabled="item.quantity<=1">－</button>
+                <input type="text" size="5" ng-model="item.quantity" ng-keydown="quantityKeydown()" ng-keyup="quantityKeyup()">
+                <button type="button" class="btn btn-default btn-xs" ng-click="add(item.id)">＋</button>
+            </td>
+            <td class="bold mark">{{item.price*item.quantity|number:2}}</td>
+            <td>
+                <button type="button" class="btn btn-default btn-xs" ng-click="delete(item.id)">删除</button>
+            </td>
+        </tr>
+    </table>
+    <div class="empty" ng-show="!items.length">购物车空空，快去寻找宝贝</div>
+    <div class="total">
+        已选商品：<span>{{getQuantites()}} </span> 合计：
+        <span class=" mark" ng-show="getTotalAmount()<15000">{{getTotalAmount()|number:2}}</span>
+        <span class=" mark" ng-show="getTotalAmount()>=15000">
+ {{getTotalAmount()*discount|number:2}}<span class="btn btn-xs">(9折)</span>
+        <span class="discount">({{getTotalAmount()|number:2}})</span>
+        </span>
+        <button type="button" class="btn btn-primary btn-sm" ng-click="alertSubmit()">结 算</button>
+    </div>
+    <!--<script src="../scripts/angular-1.4.0-rc.2/angular.js"></script>-->
+    <script src="https://cdn.bootcss.com/angular.js/1.4.0-rc.2/angular.js"></script>
+    <!--<script src="app.js"></script>-->
+</body>
+
+<script>
+    var cartModule = angular.module('cart', []);
+cartModule.controller('cartCtr', ['$scope', function ($scope) {
+    $scope.discount = 0.9;
+    $scope.items = [{ id: 10001, title: "Web全栈工程师的自我修养 余果", price: 40.80, quantity: 2, linkUrl: "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.4.cwywJs&id=532166746631" },
+        { id: 10002, title: "MacBook Pro Retina 15英寸", price: 16088.00, quantity: 1, linkUrl: "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.26.cwywJs&id=45771116847" },
+        { id: 10003, title: "Surface Book I5 128G 独显", price: 11088.00, quantity: 1, linkUrl: "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.15.cwywJs&id=525614504276" },
+        { id: 10004, title: "Lenovo Yoga3Pro I5 4G", price: 7299.00, quantity: 1, linkUrl: "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.37.cwywJs&id=41541519814" }];
+    $scope.add = function (id) {
+        angular.forEach($scope.items, function (item, index, array) {
+            if (item.id === id) { item.quantity++; }
+        })
+    };
+    $scope.reduce = function (id) {
+        angular.forEach($scope.items, function (item, index, array) {
+            if (item.id === id) { item.quantity--; }
+        })
+    };
+    //输入框添加keydown事件，避免输入非正整数
+    $scope.quantityKeydown = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        var keycode = event.keyCode;
+        if ((37 <= keycode && keycode <= 40) || (48 <= keycode && keycode <= 57) || (96 <= keycode && keycode <= 105) || keycode == 8) {
+            //方向键↑→ ↓←、数字键、backspace
+        }
+        else {
+            console.log(keycode);
+            event.preventDefault();
+            return false;
+        }
+    };
+    //keyup事件，当输入数字为0时，重新刷新文本框内容
+    $scope.quantityKeyup = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        var keycode = event.keyCode;
+        if (48 === keycode || 96 === keycode) {
+            target.value = parseInt(target.value);
+        }
+    };
+    //删除商品
+    $scope.delete = function (id) {
+        $scope.items.forEach(function (item, index) {
+            if (item.id == id) {
+                if (confirm("确定要从购物车中删除此商品？")) {
+                    $scope.items.splice(index, 1);
+                    return;
+                }
+            }
+        })
+    };
+    //计算已选商品数量
+    $scope.getQuantites = function () {
+        var quantities = 0;
+        angular.forEach($scope.items, function (item, index, array) {
+            if (item.quantity) {
+                quantities += parseInt(item.quantity);
+            }
+        });
+        return quantities;
+    };
+    //计算合计总金额
+    $scope.getTotalAmount = function () {
+        var totalAmount = 0;
+        angular.forEach($scope.items, function (item, index, array) {
+            totalAmount += item.quantity * item.price;
+        });
+        return totalAmount;
+    };
+    $scope.alertSubmit = function () { alert("Angular实现购物车"); }
+}]);
+
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css" media="all">
+<!--bootstrap轮播图css-->
+<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-touch-slider.css" media="all">
+<div class="htmleaf-container">
+    <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover"
+        data-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./images/slide/slide1.jpg" alt="Bootstrap Touch Slider"/>
+                <div class="bs-slider-overlay"></div>
+                <!--<div class="container">
+                    <div class="row">
+                        <div class="slide-text slide_style_left">
+                            <h1 data-animation="animated zoomInRight">Bootstrap Carousel</h1>
+                            <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+                            <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="item">
+                <img src="./images/slide/slide2.jpg" alt="Bootstrap Touch Slider"/>
+                <div class="bs-slider-overlay"></div>
+                <!--<div class="slide-text slide_style_center">
+                    <h1 data-animation="animated flipInX">佳能</h1>
+                    <p data-animation="animated lightSpeedIn"> 感 动 常 在 .</p>
+                    <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">select one</a>
+                    <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">select two</a>
+                </div>-->
+            </div>
+            <div class="item">
+                <img src="./images/slide/slide3.jpg" alt="Bootstrap Touch Slider"/>
+                <div class="bs-slider-overlay"></div>
+                <!--<div class="slide-text slide_style_right">
+                    <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
+                    <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                    <a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                    <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                </div>-->
+            </div>
+        </div>
+        <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap-touch-slider.js"></script>
+<script>
+    $('#bootstrap-touch-slider').bsTouchSlider();
+</script>

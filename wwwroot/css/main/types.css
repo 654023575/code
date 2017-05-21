@@ -1,0 +1,61 @@
+#type{
+    margin-top: 20px;
+}
+#span1{
+    font-size: 14px;
+    display: inline-block;
+    border-left: 1px solid #666;
+    margin-left: 15px;
+    padding-left: 10px;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+}
+.box1 > li{
+    list-style: none;
+    margin-right: 27px
+}
+.box2{
+    display: flex; 
+    justify-content: space-between;
+}
+.thumbnail1{
+    border: none;
+}
+.thumbnail1 > a > img{
+    background-color: #f4f4f4
+}
+#banners{
+    margin-bottom: 10px;
+}
+.caption{
+    text-align: center;
+    font-family: "Microsoft YaHei";
+}
+.caption h3{
+    font-size: 1rem;
+}
+#shops{
+    padding-left: 0px;
+}
+.caption>p{
+    color: red
+}
+@media screen and (min-width: 1301px){
+    .box2{
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 992px){
+        #span1{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    .box1{
+        display: none;
+    }
+}

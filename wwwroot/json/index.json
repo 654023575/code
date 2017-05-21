@@ -1,0 +1,220 @@
+{
+    "navs": [
+        {
+            "name": "网易严选 - 以严谨的态度，为中国消费者甄选天下优品",
+            "item": "首页",
+            "url": "#/main",
+            "isclick": false
+        },
+        {
+            "name": "网易严选回家，放松身心篇 - 守护你的睡眠时光、MUJI等品牌制造商出品、承托你的好时光、家里的第“五”面墙、大师级工艺、减缓久坐疲惫、一盏灯，温暖一个家、装饰你的家",
+            "item": "居家",
+            "url": "#/home",
+            "isclick": false
+        },
+        {
+            "name": "网易严选爱，囿于厨房篇 - 一口好锅，炖煮生活一日三餐、传统工艺 源自中国刀城、下厨省力小帮手、餐桌上的舞蹈、精工生产制作，匠人手艺、先进工艺制造，功夫体验、真空保鲜，美味不限时、环保便利，聪明之选、厨房里的省心小电器",
+            "item": "餐厨",
+            "url": "#/kitchenware",
+            "isclick": false
+        },
+        {
+            "name": "网易严选爱，囿于厨房篇 - 一口好锅，炖煮生活一日三餐、传统工艺 源自中国刀城、下厨省力小帮手、餐桌上的舞蹈、精工生产制作，匠人手艺、先进工艺制造，功夫体验、真空保鲜，美味不限时、环保便利，聪明之选、厨房里的省心小电器",
+            "item": "配件",
+            "url": "#/accessorice",
+            "isclick": false
+        },
+        {
+            "name": "网易严选爱，囿于厨房篇 - 一口好锅，炖煮生活一日三餐、传统工艺 源自中国刀城、下厨省力小帮手、餐桌上的舞蹈、精工生产制作，匠人手艺、先进工艺制造，功夫体验、真空保鲜，美味不限时、环保便利，聪明之选、厨房里的省心小电器",
+            "item": "杂货",
+            "url": "#/groceries",
+            "isclick": false
+        },
+        {
+            "name": "网易严选爱，囿于厨房篇 - 一口好锅，炖煮生活一日三餐、传统工艺 源自中国刀城、下厨省力小帮手、餐桌上的舞蹈、精工生产制作，匠人手艺、先进工艺制造，功夫体验、真空保鲜，美味不限时、环保便利，聪明之选、厨房里的省心小电器",
+            "item": "饮食",
+            "url": "#/foods",
+            "isclick": false
+        },
+        {
+            "name": "网易严选爱，囿于厨房篇 - 一口好锅，炖煮生活一日三餐、传统工艺 源自中国刀城、下厨省力小帮手、餐桌上的舞蹈、精工生产制作，匠人手艺、先进工艺制造，功夫体验、真空保鲜，美味不限时、环保便利，聪明之选、厨房里的省心小电器",
+            "item": "志趣",
+            "url": "#/interest",
+            "isclick": false
+        }
+    ],
+    "types": [
+        {
+            "item": "居家",
+            "summary": "回家，放松身心",
+            "type": [
+                {
+                    "href": "#/home#quilt",
+                    "name": "被枕"
+                },
+                {
+                    "href": "#/home#mattress",
+                    "name": "床垫"
+                },
+                {
+                    "href": "#/home#carpet",
+                    "name": "地毯"
+                },
+                {
+                    "href": "#/home#furniture",
+                    "name": "家具"
+                },
+                {
+                    "href": "#/home#cushion",
+                    "name": "舒坐"
+                },
+                {
+                    "href": "#/home#decoration",
+                    "name": "装饰"
+                }
+            ]
+        },
+        {
+            "item": "餐厨",
+            "summary": "爱，囿于厨房",
+            "type": [
+                {
+                    "href": "#/kitchenware#pot",
+                    "name": "锅具"
+                },
+                {
+                    "href": "#/kitchenware#spatula",
+                    "name": "刀铲"
+                },
+                {
+                    "href": "#/kitchenware#tableware",
+                    "name": "餐具"
+                },
+                {
+                    "href": "#/kitchenware#cup",
+                    "name": "杯壶"
+                },
+                {
+                    "href": "#/kitchenware#clean",
+                    "name": "清洁"
+                }
+            ]
+        },
+        {
+            "item": "配件",
+            "summary": "配角，亦是主角",
+            "type": [
+                {
+                    "href": "#/accessorice#luggage",
+                    "name": "箱包"
+                },
+                {
+                    "href": "#/accessorice#backpack",
+                    "name": "背包"
+                },
+                {
+                    "href": "#/accessorice#slipper",
+                    "name": "拖鞋"
+                },
+                {
+                    "href": "#/accessorice#scarf",
+                    "name": "围巾"
+                },
+                {
+                    "href": "#/accessorice#ornament",
+                    "name": "配饰"
+                }
+            ]
+        },
+        {
+            "item": "杂货",
+            "summary": "解忧，每个烦恼",
+            "type": [
+                {
+                    "href": "#/groceries#stationery",
+                    "name": "文具"
+                },
+                {
+                    "href": "#/groceries#incroporated",
+                    "name": "收纳"
+                },
+                {
+                    "href": "#/groceries#travel",
+                    "name": "旅行"
+                },
+                {
+                    "href": "#/groceries#foreign",
+                    "name": "海外"
+                },
+                {
+                    "href": "#/groceries#outdoor",
+                    "name": "户外"
+                },
+                {
+                    "href": "#/groceries#record",
+                    "name": "唱片"
+                }
+            ]
+        },
+        {
+            "item": "饮食",
+            "summary": "解忧，每个烦恼",
+            "type": [
+                {
+                    "href": "#/foods#pastry",
+                    "name": "糕点"
+                },
+                {
+                    "href": "#/foods#snack",
+                    "name": "小食"
+                },
+                {
+                    "href": "#/foods#dryfruit",
+                    "name": "果干"
+                },
+                {
+                    "href": "#/foods#nut",
+                    "name": "坚果"
+                },
+                {
+                    "href": "#/foods#drink",
+                    "name": "冲饮"
+                },
+                {
+                    "href": "#/foods#tea",
+                    "name": "茗茶"
+                }
+            ]
+        },
+        {
+            "item": "志趣",
+            "summary": "解忧，每个烦恼",
+            "type": [
+                {
+                    "href": "/interest#wow",
+                    "name": "魔兽"
+                },
+                {
+                    "href": "/interest#hs",
+                    "name": "炉石"
+                },
+                {
+                    "href": "/interest#ow",
+                    "name": "守望"
+                },
+                {
+                    "href": "/interest#diablo",
+                    "name": "暗黑III"
+                },
+                {
+                    "href": "/interest#starCarft",
+                    "name": "星际II"
+                },
+                {
+                    "href": "/interest#heros",
+                    "name": "风暴"
+                }
+            ]
+        }
+    ]
+}
