@@ -5,3 +5,10 @@ const db = mongoose.connection;
 db.on('error',err => console.log('数据库打开失败', err));
 //连接成功
 db.on('open', () => console.log('成功打开数据库'));
+
+const User = mongoose.model('users',{
+    username: String,
+    password: String 
+})
+
+module.exports = {User};

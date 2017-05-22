@@ -91,7 +91,12 @@ function routeFn($stateProvider, $urlRouterProvider, $locationProvider) {
                 }]
             }
         })
-        .state("login", {
+        .state("user", {
+            url: '/user',
+            template: '<div ui-view></div>',
+            abstract: true
+        })
+        .state("user.login", {
             url: "/login",
             templateUrl: "views/login/login.html",
             controller: "loginCtrl",
@@ -101,7 +106,7 @@ function routeFn($stateProvider, $urlRouterProvider, $locationProvider) {
                 }]
             }
         })
-        .state("regist", {
+        .state("user.regist", {
             url: "/regist",
             templateUrl: "views/regist/regist.html",
             controller: "registCtrl",
